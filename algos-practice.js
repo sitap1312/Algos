@@ -117,5 +117,33 @@ function miniMaxSum(arr) {
       console.log(min+ " " + max)
 }
 
+// 5. Time Conversion
+// Given a time in 12 - hour AM / PM format, convert it to military
+// (24 - hour) time.
+
+// Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.
+// - 12:00:00PM on a 12-hour clock is 12:00:00 on a 24-hour clock.
+function timeConversion(s) {
+  // Write your code here
+  let newArr = s.split(':')
+  let hours = newArr[0]
+  let minutes = newArr[1]
+  let seconds = newArr[2]
+  
+  if (hours === '12') {
+    hours = '00';
+  }
+  
+  if (seconds.includes('PM')) {
+      hours = 12 + parseInt(hours, 10)
+      seconds = seconds.replace('PM', '')
+  } else {
+      seconds = newArr[2].replace('AM','')   
+  }
+  return (`${hours}:${minutes}:${seconds}`)
+  // if(seconds.include())
+}
+
+
 
 

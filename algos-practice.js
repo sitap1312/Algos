@@ -80,3 +80,42 @@ if(count < count2) {
   console.log(count2)
 }
 }
+
+// 3. Plus Minus
+// Given an array of integers, calculate the ratios of
+// its elements that are positive, negative, and zero.
+// Print the decimal value of each fraction on a new line with 6 
+// places after the decimal.
+
+// Print
+// Print the ratios of positive, negative and zero values in the 
+// array.Each value should be printed on a separate line with  
+// digits after the decimal.The function should not return a value.
+function plusMinus(arr) {
+  // Write your code here
+  let posArr = arr.filter(x => x > 0).length / arr.length
+  console.log(posArr.toFixed(6))
+  let oddArr = arr.filter(y => y < 0).length / arr.length
+  console.log(oddArr.toFixed(6))
+  let zeroArr = arr.filter(z => z === 0).length / arr.length
+  console.log(zeroArr.toFixed(6))  
+}
+
+// 4 . Mini-Max Sum
+// Given five positive integers, find the minimum and maximum 
+// values that can be calculated by summing exactly four of 
+// the five integers.Then print the respective minimum and maximum
+// values as a single line of two space - separated long integers.
+// Print two space-separated integers on one line: 
+// the minimum sum and the maximum sum of 4 of 5 elements.
+function miniMaxSum(arr) {
+  // Write your code here
+  arr.sort();
+  let max = arr.slice(1).reduce((a,b) => a + b);
+  arr.reverse();
+  let min = arr.slice(1).reduce((a,b) => a + b);
+      console.log(min+ " " + max)
+}
+
+
+

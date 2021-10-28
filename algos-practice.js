@@ -1,4 +1,4 @@
-// Tower Breaker
+// 1. Tower Breaker
 
 // Two players are playing a game of Tower Breakers!
 // Player  always moves first, and both players always play optimally.
@@ -39,4 +39,44 @@ function towerBreakers(n, m) {
 
   return 1;
 
+}
+
+// 2. Drawing Book
+// Function Description
+
+// Complete the pageCount function in the editor below.
+
+// pageCount has the following parameter(s):
+
+// int n: the number of pages in the book
+// int p: the page number to turn to
+// Returns
+
+// int: the minimum number of pages to turn
+function pageCount(n, p) {
+  // Write your code here
+let count = 0
+let count2 = 0
+let startPage = 1
+
+while (startPage < p) {
+  count++
+  startPage = startPage + 2
+}
+if(n % 2 !==0) {
+  startPage = n - 1;
+} else {
+  startPage = n
+}
+
+while (startPage > p) {
+  count2++
+  startPage = startPage - 2
+}
+
+if(count < count2) {
+  console.log(count)
+} else {
+  console.log(count2)
+}
 }

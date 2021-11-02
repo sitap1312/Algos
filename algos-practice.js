@@ -144,6 +144,34 @@ function timeConversion(s) {
   // if(seconds.include())
 }
 
+// 6. Sparse Arrays
+// There is a collection of input strings and a collection of query
+// strings.For each query string, determine how many times it occurs
+// in the list of input strings.Return an array of the results.
+// Sample Input 1
+// 4
+// aba
+// baba
+// aba
+// xzxb
+// 3
+// aba
+// xzxb
+// ab
+// Sample Output 1
+// 2
+// 1
+// 0
+function matchingStrings(strings, queries) {
+  // Write your code here
+let results = []
+let a = strings.map((string) => {
+  return (string)
+})
 
-
+let b = queries.map((query) => {
+  results.push((a.filter(x => x === query ).length))
+})
+return results
+}
 

@@ -175,3 +175,26 @@ let b = queries.map((query) => {
 return results
 }
 
+// 7. Lonely Integer
+// Given an array of integers, where all elements but one occur twice,
+// find the unique element.
+// Example
+// a = [1,2,3,4,3,2,1]
+// The unique element is 4.
+function lonelyinteger(a) {
+  // Write your code here
+  let b = a.slice().sort();
+  let arr = []
+  
+  for (let i=0; i<b.length; i++) {
+      if (b[i] != b[i+1]) {
+          arr.push(b[i])
+      } else {
+          i++
+      }
+  }
+  return arr;
+}
+
+
+

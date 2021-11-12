@@ -196,5 +196,70 @@ function lonelyinteger(a) {
   return arr;
 }
 
+// 8. Flipping bits
+// You will be given a list of 32 bit unsigned integers.
+// Flip all the bits(and) and return the result as an unsigned integer.
+// Sample Input
+// 3 
+// 2147483647 
+// 1 
+// 0
+// Sample Output
+// 2147483648 
+// 4294967294 
+// 4294967295
+function flippingBits(n) {
+  let integer = ~n >>> 0
+  return integer  
+}
+
+// 9. Diagonal Difference
+// Given a square matrix, calculate the absolute difference 
+// between the sums of its diagonals.
+// Sample Input
+
+// 3
+// 11 2 4
+// 4 5 6
+// 10 8 -12
+// Sample Output
+
+// 15
+// Explanation
+
+// The primary diagonal is:
+
+// 11
+//    5
+//      -12
+// Sum across the primary diagonal: 11 + 5 - 12 = 4
+
+// The secondary diagonal is:
+
+//      4
+//    5
+// 10
+// Sum across the secondary diagonal: 4 + 5 + 10 = 19
+// Difference: |4 - 19| = 15
+function diagonalDifference(arr) {
+  const reducer = (previousValue, currentValue) => previousValue + currentValue;
+//iterate thru arr with a map  
+  let leftDiag = arr.map((x, index) => {
+  let nums = (x[index])
+  return nums
+  })
+
+  let sum1 = leftDiag.reduce(reducer)
+
+  //sum returned arr
 
 
+  let rightDiag = arr.map((x, index) => {
+  let nums = (x[arr.length - 1 - index])
+  return nums
+  })
+  let sum2 = rightDiag.reduce(reducer)
+  let total = sum1 - sum2
+  let absTotal = Math.abs(total)
+  return absTotal;
+}

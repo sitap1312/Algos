@@ -364,3 +364,56 @@ function twoArrays(k, A, B) {
   return ayo
 }
 
+// 13.Subarray Division 1
+// Two children, Lily and Ron, want to share a chocolate bar. Each of the squares has an integer on it.
+
+// Lily decides to share a contiguous segment of the bar selected such that:
+
+// The length of the segment matches Ron's birth month, and,
+// The sum of the integers on the squares is equal to his birth day.
+// Determine how many ways she can divide the chocolate.
+
+// Example
+// s = [2, 2, 1, 3, 2]
+// d = 4
+// m = 2
+// Function Description
+
+// Complete the birthday function in the editor below.
+
+// birthday has the following parameter(s):
+
+// int s[n]: the numbers on each of the squares of chocolate
+// int d: Ron's birth day
+// int m: Ron's birth month
+// Returns
+
+// int: the number of ways the bar can be divided
+function birthday(s, d, m) {
+  // Write your code here
+  let sum = 0;
+  let temp = 0;
+  let results = 0;
+  if (s.length < m) return null;
+  for (let i = 0; i < m; i++){
+      sum += s[i]; 
+  }
+  if(sum === d){
+          results++;
+      }else{
+          results;
+      } 
+  temp = sum;
+  for (let i = m; i < s.length; i++) {
+      temp = temp - s[i - m] + s[i]
+          if(temp === d){
+          results++;
+      }else{
+          results;
+      }
+  }
+  return results;
+
+}
+
+// 14.

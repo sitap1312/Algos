@@ -416,4 +416,24 @@ function birthday(s, d, m) {
 
 }
 
-// 14.
+// 14.XOR Strings 2
+// Given two strings consisting of digits 0 and 1 only, find the XOR of the two strings.
+// Sample Input
+
+// 10101
+// 00101
+// Sample Output
+
+// 10000
+string strings_xor(string s, string t) {
+
+  string res = "";
+  for(int i = 0; i < s.size(); i++) {
+      if(s[i] == t[i])
+          res += '0';
+      else
+          res += '1';
+  }
+
+  return res;
+}

@@ -496,3 +496,12 @@ function correct(string)
 	// your code here
   return string.replace(/0/g, "O").replace(/1/g, "I").replace(/5/g, "S")
 }
+
+// 19.Convert a Boolean to a String
+// Implement a function which convert the given boolean value 
+// into its string representation.
+function booleanToString(b){
+  //your code here
+  let String = b.toString()
+  return String
+}

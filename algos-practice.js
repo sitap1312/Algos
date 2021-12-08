@@ -505,3 +505,22 @@ function booleanToString(b){
   let String = b.toString()
   return String
 }
+
+// 20.Birthday Cake Candles
+// the number of candles that are tallest
+// Candle heights are[3,2,1,3] . 
+// The tallest candles are  3units, and there are  2of them.
+function birthdayCakeCandles(candles) {
+  // Write your code here
+  let a = 0;
+  let count = 0;
+  a = Math.max.apply(null, candles)
+  for (let i=0; i<candles.length; i++){
+      if(candles[i] === a){
+        count = count + 1
+      } 
+  }
+  return count
+  
+
+}

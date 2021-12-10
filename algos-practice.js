@@ -521,6 +521,22 @@ function birthdayCakeCandles(candles) {
       } 
   }
   return count
-  
+}
 
+// 21. Isogram
+function isIsogram(str){
+  //...
+//   let string = str.toLowerCase();
+//   let arr = string.split("");
+//   arr.sort();
+//   for (let i=0; i <= string.length; i++) {
+//     if (arr === undefined) {
+//       return true;
+//     }else if (arr[i] == arr[i+1]) {
+//       return false
+//     } else {
+//       return true
+//     }
+//   }
+  return !str.match(/([a-z]).*\1/i);
 }

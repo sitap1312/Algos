@@ -566,3 +566,26 @@ function paperwork(n, m) {
   }
   
 }
+
+// 24. Counting Duplicates
+function duplicateCount(text){
+  //...
+  text = text.toLowerCase()
+  let array = text.split("")
+  let value = 0;
+  array = array.sort();
+  let count = [];
+  for (let i=0; i< array.length; i++) {
+    if(array[i] === array[i+1]){
+      count.push(array[i])
+    }
+  }
+  
+  for (let j=0; j<count.length; j++){
+    if(count[j] !== count[j+1]){
+      value = value+1
+    }
+  }
+  console.log(value)
+  return value;
+}

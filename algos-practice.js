@@ -589,3 +589,38 @@ function duplicateCount(text){
   console.log(value)
   return value;
 }
+
+// 25.Roman Numerals Decoder
+function solution(roman){
+  //   complete the solution by transforming the 
+  //   string roman numeral into an integer  
+    const list = {I: 1,V: 5,X: 10,L: 50,C: 100,D: 500,M: 1000};
+    let array = roman.split("")
+    console.log(array)
+    let int = 0;
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === "I" && array[i + 1] === "V") {
+          int += 4;
+          i++;
+        } else if (array[i] === "I" && array[i + 1] === "X") {
+          int += 9;
+          i++;
+        } else if (array[i] === "X" && array[i + 1] === "L") {
+          int += 40;
+          i++;
+        } else if (array[i] === "X" && array[i + 1] === "C") {
+          int += 90;
+          i++;
+        } else if (array[i] === "C" && array[i + 1] === "D") {
+          int += 400;
+          i++;
+        } else if (array[i] === "C" && array[i + 1] === "M") {
+          int += 900;
+          i++;
+        } else {
+          int += list[array[i]];
+        }
+      }
+      return int;
+};
+

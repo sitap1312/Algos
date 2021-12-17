@@ -624,3 +624,26 @@ function solution(roman){
       return int;
 };
 
+// 26. Find the next perfect square!
+function findNextSquare(sq) {
+  // Return the next square if sq is a perfect square, -1 otherwise
+  let sqrtN = Math.sqrt(sq);
+  let nextSq;
+  if (sqrtN % 1 === 0) {
+    sqrtN
+    nextSq = sqrtN + 1;
+  } else {
+    return -1;
+  }
+  return nextSq * nextSq
+}
+// 26. Find the next perfect square!
+function findNextSquare(sq) {
+  // Return the next square if sq is a perfect square, -1 otherwise
+  let sqrtN = Math.sqrt(sq);
+  if (Number.isInteger(sqrtN)) {
+    return (sqrtN + 1) * (sqrtN + 1)
+  } else {
+    return -1;
+  }
+}
